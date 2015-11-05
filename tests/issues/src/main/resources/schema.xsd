@@ -14,7 +14,7 @@
 
 	<xs:annotation>
 		<xs:appinfo>
-			<jaxb:globalBindings generateIsSetMethod="true"
+			<jaxb:globalBindings generateIsSetMethod="false"
 				localScoping="toplevel"
 				fixedAttributeAsConstantProperty="true"/>
 			<jaxb:schemaBindings>
@@ -269,4 +269,10 @@
 		</xs:sequence>
 	</xs:complexType>
 
+	<xs:element name="issue37">
+		<xs:complexType>
+			<xs:attribute name="booleanDefaultTrue" type="xs:boolean" default="true"/>
+		</xs:complexType>
+	</xs:element>
+	
 </xs:schema>
